@@ -5,16 +5,16 @@ import com.epam.hometask.six.model.Book;
 
 import java.util.List;
 
-public interface Dao {
+public interface BookDao {
 
-    public void sortByTag(BookFieldsType type);
+     void sortByTag(BookFieldsType type);
 
-    public <T> List<Book> findBookByTag(BookFieldsType type, T name);
+     <T> List<Book> findBookByTag(BookFieldsType type, T value);
 
-    public void removeBook(Book book) throws DaoException;
+     void removeBook(Book book) throws DaoException;
 
-    public void addBook(List<Book> books) throws DaoException;
+     void addBook(List<Book> books) throws DaoException;
 
-    public void addBook(Book book) throws DaoException;
+     void addBook(Book book) throws DaoException;
 
 }

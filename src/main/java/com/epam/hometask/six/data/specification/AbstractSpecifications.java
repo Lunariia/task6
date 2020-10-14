@@ -12,7 +12,7 @@ public abstract class AbstractSpecifications<T> implements Specification<T> {
     @Override
     public List<Book> find(List<Book> books, T value) {
 
-        List<Book> searchedBooks = new ArrayList<Book>();
+        List<Book> searchedBooks = new ArrayList<>();
 
         for (Book book: books) {
 

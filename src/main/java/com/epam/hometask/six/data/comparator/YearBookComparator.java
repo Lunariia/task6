@@ -4,14 +4,14 @@ import com.epam.hometask.six.model.Book;
 
 import java.util.Comparator;
 
-public class YearBookComparator  implements Comparator<Book> {
+public class YearBookComparator implements Comparator<Book> {
 
 
     @Override
     public int compare(Book firstBook, Book secondBook) {
 
-        Integer firstYear = (Integer)firstBook.getYear();
-        Integer secondYear = (Integer)secondBook.getYear();
+        Integer firstYear = (Integer) firstBook.getYear();
+        Integer secondYear = (Integer) secondBook.getYear();
 
         if (firstYear == null) {
             return -1;
@@ -19,13 +19,11 @@ public class YearBookComparator  implements Comparator<Book> {
 
             if (secondYear == null) {
                 return 1;
-            }
-            else {
+            } else {
                 if (firstYear == null && secondYear == null) {
                     return 0;
-                } else {
-                    return firstYear.compareTo(secondYear);
                 }
+                return firstYear.compareTo(secondYear);
             }
         }
     }

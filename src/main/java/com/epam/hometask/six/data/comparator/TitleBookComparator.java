@@ -21,9 +21,8 @@ public class TitleBookComparator implements Comparator<Book> {
             } else {
                 if (firstTitle == null && secondTitle == null) {
                     return 0;
-                } else {
-                    return firstTitle.compareToIgnoreCase(secondTitle);
                 }
+                return firstTitle.compareToIgnoreCase(secondTitle);
             }
         }
     }
