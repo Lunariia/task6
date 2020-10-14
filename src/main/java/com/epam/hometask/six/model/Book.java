@@ -29,7 +29,7 @@ public class Book {
     }
 
     public List<String> getAuthors() {
-        List<String> authorClone = new ArrayList<String>();
+        List<String> authorClone = new ArrayList<>();
         authorClone.addAll(authors);
 
         return authorClone;
@@ -49,8 +49,12 @@ public class Book {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) {return true;}
-        if (o == null || getClass() != o.getClass()) {return false;}
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Book book = (Book) o;
         return year == book.year &&
                 pages == book.pages &&

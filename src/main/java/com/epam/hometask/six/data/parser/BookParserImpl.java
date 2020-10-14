@@ -1,11 +1,11 @@
-package com.epam.hometask.six.data;
+package com.epam.hometask.six.data.parser;
 
 import com.epam.hometask.six.model.Book;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BookParser {
+public class BookParserImpl implements Parser {
 
     private final static String LINE_END = "\\s+";
 
@@ -17,7 +17,7 @@ public class BookParser {
         String publisher = fields[1];
         int year = Integer.parseInt(fields[2]);
         int pages = Integer.parseInt(fields[3]);
-        List<String> authors = new ArrayList<String>();
+        List<String> authors = new ArrayList<>();
 
         for (int i = 4; i < fields.length;i++){
             authors.add(fields[i]);

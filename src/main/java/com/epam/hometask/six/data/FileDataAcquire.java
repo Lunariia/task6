@@ -15,18 +15,14 @@ public class FileDataAcquire {
 
     private final static Logger LOGGER = Logger.getLogger(String.valueOf(FileDataAcquire.class));
 
-    private String filePath;
-
-    public FileDataAcquire(String filePath) {
-        this.filePath = filePath;
-    }
+    private static final String PATH = "src/fileData";
 
     public List<String> readData() {
 
 
         List<String> list = new ArrayList<>();
 
-        try (BufferedReader reader = Files.newBufferedReader(Paths.get(filePath))) {
+        try (BufferedReader reader = Files.newBufferedReader(Paths.get(PATH))) {
 
             // read line by line
             String line;

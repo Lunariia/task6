@@ -19,15 +19,12 @@ public class PagesBookComparator implements Comparator<Book> {
 
             if (secondPages == null) {
                 return 1;
-            }
-            else {
+            } else {
                 if (firstPages == null && secondPages == null) {
                     return 0;
-                } else {
-                    return firstPages.compareTo(secondPages);
                 }
+                return firstPages.compareTo(secondPages);
             }
         }
-
     }
 }

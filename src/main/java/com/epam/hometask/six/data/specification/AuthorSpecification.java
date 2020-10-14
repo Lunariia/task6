@@ -10,7 +10,7 @@ public class AuthorSpecification implements Specification<String> {
     @Override
     public List<Book> find(List<Book> books, String value) {
 
-        List<Book> searchedBooks = new ArrayList<Book>();
+        List<Book> searchedBooks = new ArrayList<>();
 
         for (Book book: books) {
 
@@ -20,6 +20,7 @@ public class AuthorSpecification implements Specification<String> {
 
                 if (author.equalsIgnoreCase(value)){
                     searchedBooks.add(book);
+                    break;
                 }
 
             }

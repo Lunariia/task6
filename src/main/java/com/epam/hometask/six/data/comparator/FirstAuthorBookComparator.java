@@ -18,15 +18,12 @@ public class FirstAuthorBookComparator implements Comparator<Book> {
 
             if (secondAuthor == null) {
                 return 1;
-            }
-            else {
+            } else {
                 if (firstAuthor == null && secondAuthor == null) {
                     return 0;
-                } else {
-                    return firstAuthor.compareToIgnoreCase(secondAuthor);
                 }
+                return firstAuthor.compareToIgnoreCase(secondAuthor);
             }
         }
-
     }
 }

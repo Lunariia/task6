@@ -22,9 +22,8 @@ public class PublisherBookComparator implements Comparator<Book> {
             } else {
                 if (firstPublisher == null && secondPublisher == null) {
                     return 0;
-                } else {
-                    return firstPublisher.compareToIgnoreCase(secondPublisher);
                 }
+                return firstPublisher.compareToIgnoreCase(secondPublisher);
             }
         }
     }
